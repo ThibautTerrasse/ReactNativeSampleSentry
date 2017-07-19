@@ -8,8 +8,6 @@ import {
 import PropTypes from 'prop-types';
 import { Sentry, SentrySeverity } from 'react-native-sentry';
 
-
-
 import Info from '../components/Info';
 
 import { GREETINGS_SCENE_NAME } from '../screens/GreetingsScreen';
