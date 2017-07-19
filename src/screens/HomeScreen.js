@@ -120,7 +120,7 @@ export default class HomeScreen extends Component {
           />
         </View>
         <View>
-          <Text>Config.API_URL</Text>
+          <Text>{Config.ENV}</Text>
         </View>
       </ScrollView>
     );
