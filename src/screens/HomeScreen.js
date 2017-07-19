@@ -4,10 +4,11 @@ import {
   Button,
   StyleSheet,
   View,
+  Text,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { Sentry, SentrySeverity } from 'react-native-sentry';
-
+import Config from 'react-native-config';
 import Info from '../components/Info';
 
 import { GREETINGS_SCENE_NAME } from '../screens/GreetingsScreen';
@@ -29,6 +30,7 @@ Sentry.setUserContext({
     isAdmin: false,
   },
 });
+
 
 export const HOME_SCENE_NAME = 'HOME_SCENE';
 
@@ -116,6 +118,9 @@ export default class HomeScreen extends Component {
             }}
             title="Throw error"
           />
+        </View>
+        <View>
+          <Text>Config.API_URL</Text>
         </View>
       </ScrollView>
     );
