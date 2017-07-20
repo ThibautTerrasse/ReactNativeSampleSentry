@@ -114,7 +114,7 @@ export default class HomeScreen extends Component {
         <View style={styles.margin}>
           <Button
             onPress={() => {
-              console.log('FIX SENTRY ERROR');
+             // console.log('FIX SENTRY ERROR');
               throw new Error();
             }}
             title="Throw error"
@@ -128,9 +128,6 @@ export default class HomeScreen extends Component {
             onPress={() => Alert.alert(
               'Alert Title',
               'Thibaut Terrasse',
-              [
-                { text: 'OK', onPress: () => console.log('OK Pressed!') },
-              ],
             )}
           />
         </View>
