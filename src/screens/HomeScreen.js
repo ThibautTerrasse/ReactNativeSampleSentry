@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
   Text,
+  Alert,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { Sentry, SentrySeverity } from 'react-native-sentry';
@@ -121,6 +122,17 @@ export default class HomeScreen extends Component {
         </View>
         <View>
           <Text>{Config.ENV}</Text>
+        </View>
+        <View>
+          <Button
+            onPress={() => Alert.alert(
+              'Alert Title',
+              'Thibaut Terrasse',
+              [
+                { text: 'OK', onPress: () => console.log('OK Pressed!') },
+              ],
+            )}
+          />
         </View>
       </ScrollView>
     );
