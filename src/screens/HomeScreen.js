@@ -6,6 +6,7 @@ import {
   View,
   Text,
   Alert,
+  TouchableHighlight,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { Sentry, SentrySeverity } from 'react-native-sentry';
@@ -120,16 +121,20 @@ export default class HomeScreen extends Component {
             title="Throw error"
           />
         </View>
-        <View>
+        <View style={styles.margin}>
           <Text>{Config.ENV}</Text>
         </View>
         <View>
-          <Button
+          <TouchableHighlight
             onPress={() => Alert.alert(
               'Alert Title',
               'Thibaut Terrasse',
             )}
-          />
+          >
+            <View>
+              <Text>Alert with one button</Text>
+            </View>
+          </TouchableHighlight>
         </View>
       </ScrollView>
     );
